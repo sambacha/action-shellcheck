@@ -92,4 +92,10 @@ else
     done
 fi
 
+if  find "${INPUT_SCANDIR}" "${excludes[@]}" -path '*bin/*' -name '*.*' -type f -perm /111 -perm /444 -print0 | xargs -0 -I {} -P "$(nproc)"  bash -c "shellcheck -f diff \"{}\" | git apply"
+    grep .
+then
+    echo >&2 "::Git Apply:: Done"
+fi
+
 exit "$statuscode"
