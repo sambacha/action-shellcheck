@@ -1,5 +1,5 @@
-name: "ShellCheck"
-author: "Ludeeus <hi@ludeeus.dev>"
+name: "Autofix-ShellCheck"
+author: "SEE CONTRIBUTORS"
 description: "GitHub action for ShellCheck."
 inputs:
   ignore:
